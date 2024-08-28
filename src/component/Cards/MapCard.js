@@ -23,7 +23,7 @@ const MapCard = () => {
       center={position}
       zoom={15}
       scrollWheelZoom={false}
-      className="h-[50vh] w-full"
+      className="h-[50vh] w-full map-container"
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

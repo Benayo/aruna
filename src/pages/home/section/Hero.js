@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -15,9 +16,12 @@ const Hero = () => {
           into sector champions.
         </p>
 
-        <button className="bg-primary-100 font-body font-medium text-base py-5 px-12 md:py-6 md:px-16 rounded-md">
+        <Link
+          to="/contact"
+          className="bg-primary-100 font-body font-medium text-base py-5 px-12 md:py-6 md:px-16 rounded-md"
+        >
           Contact Us
-        </button>
+        </Link>
       </div>
     </div>
   );
