@@ -68,7 +68,7 @@ const Footer = () => {
         <div className="mt-10 md:mt-16 border-t border-white-100 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm md:text-base">
             <div className="mb-4 md:mb-0">
-              © 2024 Hage. All rights reserved.
+              © 2024 Aruna. All rights reserved.
             </div>
             <ul className="flex space-x-4 text-xs md:text-sm">
               <li className="underline">Privacy Policy</li>
