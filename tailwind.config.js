@@ -34,6 +34,31 @@ module.exports = {
         "header-background-one": "url('/src/assests/Image/header-img-1.png')",
         "header-background-two": "url('/src/assests/Image/contact-header.png')",
       },
+      keyframes: {
+        moveInLeft: {
+          "0%": { transform: "translateX(-100px)", opacity: 0 },
+          "80%": { transform: "translateX(10px)" },
+          "100%": { transform: "translateX(0)", opacity: 1 },
+        },
+        // moveInRight: {
+        //   "0%": { transform: "translateX(100px)", opacity: 0 },
+        //   "80%": { transform: "translateX(-10px)" },
+        //   "100%": { transform: "translateX(0)", opacity: 1 },
+        // },
+        moveInBottom: {
+          "0%": { transform: "translateY(3rem)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
+        ping: {
+          "75%, 100%": { transform: "scale(1.1)", opacity: 1 },
+        },
+      },
+      animation: {
+        moveInLeft: "moveInLeft 1s ease-out",
+        // moveInRight: "moveInRight 1s ease-out",
+        moveInBottom: "moveInBottom 1.5s ease-in backwards",
+        // animatePing: "ping 3s cubic-bezier(0, 0, 0.2, 1)",
+      },
     },
   },
   plugins: [],
