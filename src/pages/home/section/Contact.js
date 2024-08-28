@@ -27,7 +27,7 @@ const Contact = () => {
             <div className="flex items-center mb-4 font-light">
               <img src={location} alt="location" className="w-6 md:w-8" />
               <span className="ml-4 text-sm md:text-base">
-                373 21h Street, Office 422 Tokyo
+                900 S. Stonebridge, Suite number 102, McKinney Texas, 75070
               </span>
             </div>
             <div className="flex items-center font-light">
@@ -41,7 +41,7 @@ const Contact = () => {
 
         {/* Contact Form */}
         <form className="flex flex-col">
-          <div className="grid grid-cols-2 gap-6 mb-6">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-10 mb-6">
             {/* Name Input */}
             <div className="flex items-center border-b py-2 col-span-2 md:col-span-1">
               <img src={person} alt="person" className="w-6 md:w-8" />

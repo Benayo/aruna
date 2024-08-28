@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import logo from "../../assests/Svg/Logo.svg";
 import close from "../../assests/Svg/closeMenu.svg";
@@ -30,9 +30,9 @@ const MobileMenu = () => {
       <div className="fixed w-full z-40">
         <div className="fixed w-full z-50 flex flex-col">
           <div className="flex justify-between items-center px-4 py-4 w-full bg-white-100 shadow-sm  font-body">
-            <Link to="/">
+            <NavLink to="/">
               <img src={logo} alt="aruna_logo" className="w-16" />
-            </Link>
+            </NavLink>
             <div className="">
               <img
                 src={showMobileMenu ? close : menu} // Toggle between menu and close icons
@@ -47,21 +47,21 @@ const MobileMenu = () => {
             <div className=" w-full bg-white-100 z-50 transform transition-transform ease-in-out duration-300">
               <div className=" px-4">
                 <ul className="flex flex-col justify-center items-center font-body  py-4 cursor-pointer font-medium pb-12">
-                  <Link onClick={closeMenu} className="py-4">
+                  <NavLink to="/about" onClick={closeMenu} className="py-4">
                     About
-                  </Link>
+                  </NavLink>
 
-                  <Link onClick={closeMenu} className="py-4">
+                  <NavLink to="/focus" onClick={closeMenu} className="py-4">
                     Focus
-                  </Link>
+                  </NavLink>
 
-                  <Link onClick={closeMenu} className="py-4">
+                  <NavLink to="/portfolio" onClick={closeMenu} className="py-4">
                     Portfolio
-                  </Link>
+                  </NavLink>
 
-                  <Link onClick={closeMenu} className="py-4">
+                  <NavLink to="/contact" onClick={closeMenu} className="py-4">
                     Contact us
-                  </Link>
+                  </NavLink>
                 </ul>
               </div>
             </div>

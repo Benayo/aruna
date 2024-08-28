@@ -12,23 +12,38 @@ const NavBar = () => {
         </Link>
 
         <ul className="hidden md:flex justify-between items-center text-sm font-normal">
-          <NavLink className="mr-6 text-primary-200 hover:text-primary-100 transition-colors duration-300 hover:font-medium">
+          <NavLink
+            to="/"
+            className="mr-6 text-primary-200 hover:text-primary-100 transition-colors duration-300 hover:font-medium"
+          >
             <p className="pr-2">Home</p>
           </NavLink>
 
-          <NavLink className="mr-6 text-primary-200 hover:text-primary-100 transition-colors duration-300 hover:font-medium">
+          <NavLink
+            to="/about"
+            className="mr-6 text-primary-200 hover:text-primary-100 transition-colors duration-300 hover:font-medium"
+          >
             <p className="pr-2">About us</p>
           </NavLink>
 
-          <NavLink className="mr-6 text-primary-200 hover:text-primary-100 transition-colors duration-300 hover:font-medium">
+          <NavLink
+            to="/focus"
+            className="mr-6 text-primary-200 hover:text-primary-100 transition-colors duration-300 hover:font-medium"
+          >
             <p className="pr-2">Focus</p>
           </NavLink>
 
-          <NavLink className="mr-6 text-primary-200 hover:text-primary-100 transition-colors duration-300 hover:font-medium">
+          <NavLink
+            to="/portfolio"
+            className="mr-6 text-primary-200 hover:text-primary-100 transition-colors duration-300 hover:font-medium"
+          >
             <p className="pr-2">Portfolio</p>
           </NavLink>
 
-          <NavLink className="mr-6 text-primary-200 hover:text-primary-100 transition-colors duration-300 hover:font-medium">
+          <NavLink
+            to="/contact"
+            className="mr-6 text-primary-200 hover:text-primary-100 transition-colors duration-300 hover:font-medium"
+          >
             <p className="pr-2">Contact us</p>
           </NavLink>
         </ul>
