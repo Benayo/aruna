@@ -18,33 +18,41 @@ const Aboutpage = () => {
       <div className="pb-20">
         {/* About Us Section */}
         <section className="py-8 md:py-16 bg-white-100 px-4 md:px-16">
-          <h2 className="text-lg md:text-2xl font-main text-secondary-100 font-semibold mb-4">
+          <h2 className="text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4 lg:mb-0 ">
             About Us
           </h2>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-8 gap-x-10 md:gap-x-20 text-left">
-            <h1 className="text-2xl md:text-[2.8rem] font-main text-primary-200 font-semibold leading-tight">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 gap-x-10 md:gap-x-20 text-left">
+            <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-primary-200 font-semibold md:leading-snug">
               We are here to support small scale businesses and ensure they
               succeed.
             </h1>
 
             <div>
-              <p className="font-body font-normal leading-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                sit amet accumsan arcu. Sed vel lectus nec purus dapibus
-                ultricies. Vestibulum vel urna eu augue posuere vehicula et non
-                magna. Nulla facilisi. Ut in turpis tincidunt, ultricies eros
-                vel, viverra mi. Curabitur vel tincidunt lorem. Nam varius orci
-                vel libero cursus, non hendrerit mi efficitur.
+              <p className="font-body font-normal text-sm xl:text-base my-2 md:my-4 leading-6 xl:leading-8">
+                Aruna Investment Partners (“Aruna”) is an investment management
+                firm established to operate as an independent Sponsor to owners
+                and managers of small-medium sized businesses operating in
+                select segments of the North American economy. We provide
+                long-term catalytic capital that empowers founders and managers
+                to embark on ambitious growth objectives and the operational
+                support to help them achieve their full potential.
                 <br />
                 <br />
-                Mauris venenatis, dolor vel convallis euismod, metus eros
-                fermentum sem, id condimentum libero dui vel magna. Donec
-                tincidunt velit et ligula sagittis, a sagittis purus luctus.
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Cras sit amet volutpat urna.
-                Phasellus a leo lacus. Fusce consectetur tortor id sem feugiat,
-                at vehicula libero scelerisque.
+                We understand that businesses need more than capital to succeed.
+                We support businesses to better understand the markets they
+                operate in, position for growth and adopt best-in-class
+                operational practices leveraging technology and our broad
+                network of ecosystem relationships. We work side by side with
+                our management teams to co- create and execute on unique
+                strategies to differentiate their business from the pack,
+                propelling them to outpace the competition in an often crowded
+                marketplace.
+                <br />
+                <br />
+                Aruna is a US-based Delaware incorporated affiliate of the
+                CardinalStone Group – a Multi-Asset Investment Management Firm
+                based in Nigeria.
               </p>
             </div>
           </div>
@@ -63,13 +71,11 @@ const Aboutpage = () => {
               <h1 className="text-3xl md:text-4xl font-semibold text-primary-200 font-main">
                 Our Vision
               </h1>
-              <p className="font-body font-normal leading-8 py-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                sit amet accumsan arcu. Sed vel lectus nec purus dapibus
-                ultricies. Vestibulum vel urna eu augue posuere vehicula et non
-                magna. Nulla facilisi. Ut in turpis tincidunt, ultricies eros
-                vel, viverra mi. Curabitur vel tincidunt lorem. Nam varius orci
-                vel libero cursus, non hendrerit mi efficitur.
+              <p className="font-body font-normal text-sm xl:text-base my-2 md:my-4 leading-6 xl:leading-8">
+                We aim to become the premier catalyst for transformative growth,
+                empowering small and medium-sized businesses in North America to
+                achieve market leadership through strategic capital investment,
+                operational excellence, and unparalleled ecosystem partnerships.
               </p>
             </div>
           </div>
@@ -78,7 +84,7 @@ const Aboutpage = () => {
         {/* Expert Team Section */}
         <section className="py-8 md:py-16 bg-white-100 px-4 md:px-16">
           <div className="text-center">
-            <h2 className="text-lg md:text-2xl font-main text-secondary-100 font-semibold mb-4">
+            <h2 className="text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4">
               Expert Team
             </h2>
             <h1 className="text-3xl md:text-4xl font-semibold text-primary-200 font-main">
@@ -87,85 +93,87 @@ const Aboutpage = () => {
           </div>
 
           <div className="flex flex-col items-center py-12 md:py-24">
-            <div className="grid grid-cols-4 md:grid-cols-3 md:grid-cols-8 gap-8">
+            <div className="grid grid-cols-4 md:grid-cols-8 gap-8">
               {/* Team Member 1 */}
-              <div className="text-center col-span-2 md:col-span-2">
+              <div className="text-center col-span-2">
                 <img
                   src={image1}
                   alt="Joe Bridges"
                   className="w-full rounded-md"
                 />
                 <div className="py-6">
-                  <h3 className="text-xl font-medium text-primary-200 font-main">
+                  <h3 className="md:text-xl font-medium text-primary-200 font-main">
                     Joe Bridges
                   </h3>
-                  <p className="font-body font-light leading-8">Founder</p>
+                  <p className=" text-sm md:text-base font-body font-light leading-8">
+                    Founder
+                  </p>
                 </div>
               </div>
 
               {/* Team Member 2 */}
-              <div className="text-center col-span-2 md:col-span-2">
+              <div className="text-center col-span-2">
                 <img
                   src={image2}
                   alt="Jeffrey Walters"
                   className="w-full rounded-md"
                 />
                 <div className="py-6">
-                  <h3 className="text-xl font-medium text-primary-200 font-main">
+                  <h3 className="md:text-xl font-medium text-primary-200 font-main">
                     Jeffrey Walters
                   </h3>
-                  <p className="font-body font-light leading-8">
+                  <p className=" text-sm md:text-base font-body font-light leading-8">
                     Chief Executive Officer
                   </p>
                 </div>
               </div>
 
               {/* Team Member 3 */}
-              <div className="text-center col-span-2 md:col-span-2">
+              <div className="text-center col-span-2">
                 <img
                   src={image3}
                   alt="Jason Reed"
                   className="w-full rounded-md"
                 />
                 <div className="py-6">
-                  <h3 className="text-xl font-medium text-primary-200 font-main">
+                  <h3 className="md:text-xl font-medium text-primary-200 font-main">
                     Jason Reed
                   </h3>
-                  <p className="font-body font-light leading-8">
+                  <p className=" text-sm md:text-base font-body font-light leading-8">
                     Managing Director
                   </p>
                 </div>
               </div>
 
               {/* Team Member 4 */}
-              <div className="text-center col-span-2 md:col-span-2">
+              <div className="text-center col-span-2">
                 <img
                   src={image4}
                   alt="Nellie Padilla"
                   className="w-full rounded-md"
                 />
                 <div className="py-6">
-                  <h3 className="text-xl font-medium text-primary-200 font-main">
+                  <h3 className="md:text-xl font-medium text-primary-200 font-main">
                     Nellie Padilla
                   </h3>
-                  <p className="font-body font-light leading-8">
+                  <p className=" text-sm md:text-base font-body font-light leading-8">
                     Senior Operating Partner
                   </p>
                 </div>
               </div>
 
               {/* Team Member 5 */}
-              <div className="text-center col-span-2 md:col-span-2 md:col-start-2">
+              <div className="text-center col-span-2 md:col-start-2">
                 <img
                   src={image5}
                   alt="Dean Bell"
                   className="w-full rounded-md"
                 />
                 <div className="py-6">
-                  <h3 className="text-xl font-medium text-primary-200 font-main">
+                  <h3 className="md:text-xl font-medium text-primary-200 font-main">
                     Dean Bell
                   </h3>
-                  <p className="font-body font-light leading-8">
+                  <p className=" text-sm md:text-base font-body font-light leading-8">
                     Business Development Officer
                   </p>
                 </div>
@@ -179,27 +187,27 @@ const Aboutpage = () => {
                   className="w-full rounded-md"
                 />
                 <div className="py-6">
-                  <h3 className="text-xl font-medium text-primary-200 font-main">
+                  <h3 className="md:text-xl font-medium text-primary-200 font-main">
                     Pearl Brooks
                   </h3>
-                  <p className="font-body font-light leading-8">
+                  <p className=" text-sm md:text-base font-body font-light leading-8">
                     Executive Assistant
                   </p>
                 </div>
               </div>
 
               {/* Team Member 7 */}
-              <div className="text-center col-span-2 col-start-2  md:col-span-2">
+              <div className="text-center col-span-2  col-start-2   md:col-span-2">
                 <img
                   src={image7}
                   alt="Isaiah Griffin"
                   className="w-full rounded-md"
                 />
                 <div className="py-6">
-                  <h3 className="text-xl font-medium text-primary-200 font-main">
+                  <h3 className="md:text-xl font-medium text-primary-200 font-main">
                     Isaiah Griffin
                   </h3>
-                  <p className="font-body font-light leading-8">
+                  <p className=" text-sm md:text-base font-body font-light leading-8">
                     Chief Financial Officer
                   </p>
                 </div>

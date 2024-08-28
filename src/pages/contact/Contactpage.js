@@ -15,22 +15,22 @@ const Contactpage = () => {
     <section>
       <ContactHeader title="Contact us" />
 
-      <section className="py-16 pb-[6.25rem] md:pb-0 md:py-[6.25rem] px-4 md:px-16 font-body">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <section className="py-16 md:py-[6.25rem] px-4 md:px-16 font-body">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 gap-x-10 md:gap-x-20 text-left">
           {/* Contact Information */}
           <div className="bg-primary-100 p-6 lg:p-8 rounded-md text-white-100">
-            <h2 className=" lg:text-2xl font-main font-medium mb-4">
+            <h2 className="text-xl md:text-2xl font-main text-white-100 font-semibold">
               Get in Touch!
             </h2>
-            <h1 className="text-3xl lg:text-[2.8rem] font-main font-semibold leading-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-white-100 font-semibold md:leading-snug my-6 md:my-4">
               Contact Us
             </h1>
-            <p className="font-body font-normal mb-4 lg:mb-6 leading-6 lg:leading-7 text-sm lg:text-base">
-              Purus in massa tempor nec. Magna etiam tempor orci eu lobortis
-              elementum nibh tellus molestie. Faucibus ornare
+            <p className="font-body font-normal text-sm xl:text-base my-2 md:my-4 leading-6 xl:leading-8">
+              Stay connected with us for timely updates and support. We value
+              your feedback and look forward to hearing from you!
             </p>
             <div className="py-4 font-body">
-              <div className="flex items-center mb-4 font-light">
+              <div className="flex items-center mb-6 font-light">
                 <img src={location} alt="location" className="w-5 lg:w-6" />
                 <span className="ml-3 lg:ml-4 text-sm lg:text-base">
                   900 S. Stonebridge, Suite number 102, McKinney Texas, 75070
@@ -60,7 +60,7 @@ const Contactpage = () => {
             <h1 className="pt-8 pb-10 lg:pb-16 font-main text-xl">
               Leave us a Message
             </h1>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-8 lg:gap-y-16 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-8 lg:gap-y-16 mb-6">
               {/* Name Input */}
               <div className="flex items-center border-b border-[#B9B9B9] py-2 col-span-1">
                 <img src={person} alt="person" className="w-5 lg:w-6" />
@@ -113,7 +113,7 @@ const Contactpage = () => {
             </div>
 
             <div className="mt-8 lg:mt-12 flex justify-center lg:justify-end">
-              <button className="w-full lg:w-auto px-6 lg:px-8 py-3 lg:py-4 bg-primary-100 text-white-100 rounded-md font-body focus:outline-none focus:ring-2 focus:ring-primary-100 focus:ring-opacity-50 transition-colors duration-300">
+              <button className="w-full lg:w-auto px-6 lg:px-8 py-3 lg:py-4 bg-primary-100 text-white-100 rounded-md font-body font-medium text-base focus:outline-none focus:ring-2 focus:ring-primary-100 focus:ring-opacity-50 transition-colors duration-300">
                 Send a Message
               </button>
             </div>

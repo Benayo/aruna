@@ -34,35 +34,34 @@ const Focuspage = () => {
     <section>
       <Header title="Focus" />
 
-      <div className="pb-[6.25rem]">
+      <div className="pb-20">
         {/* Approach Section */}
         <div className="py-4 md:py-16 bg-white-100 px-4 md:px-16 ">
-          <h2 className="text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4">
+          <h2 className="text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4 lg:mb-0 ">
             Approach
           </h2>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-8 gap-x-10 md:gap-x-20 text-left">
-            <h1 className="text-2xl md:text-[2.8rem] font-main text-primary-200 font-semibold leading-tight">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 gap-x-10 md:gap-x-20 text-left">
+            <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-primary-200 font-semibold md:leading-snug">
               We partner with and invest in small businesses.
             </h1>
 
             <div>
-              <p className="font-body font-normal leading-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                sit amet accumsan arcu. Sed vel lectus nec purus dapibus
-                ultricies. Vestibulum vel urna eu augue posuere vehicula et non
-                magna. Nulla facilisi. Ut in turpis tincidunt, ultricies eros
-                vel, viverra mi. Curabitur vel tincidunt lorem. Nam varius orci
-                vel libero cursus, non hendrerit mi efficitur.
+              <p className="font-body font-normal text-sm xl:text-base my-2 md:my-4 leading-6 xl:leading-8">
+                Choosing the right investment partner is a crucial decision that
+                can shape the future of any business. At Aruna Investment
+                Partners, we recognize the importance of this choice and are
+                committed to being more than just a capital provider; we are
+                your dedicated partner in growth.
                 <br />
                 <br />
-                Mauris venenatis, dolor vel convallis euismod, metus eros
-                fermentum sem, id condimentum libero dui vel magna. Donec
-                tincidunt velit et ligula sagittis, a sagittis purus luctus.
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Cras sit amet volutpat urna.
-                Phasellus a leo lacus. Fusce consectetur tortor id sem feugiat,
-                at vehicula libero scelerisque.
+                For years, Aruna has been at the forefront of empowering small
+                and medium-sized businesses in North America, providing them
+                with the strategic capital and operational support they need to
+                realize their ambitious growth objectives. Our approach
+                transcends traditional investment models by offering a holistic
+                partnership that aligns with the unique needs of business
+                owners, management teams, and our firm.
               </p>
             </div>
           </div>
@@ -77,39 +76,40 @@ const Focuspage = () => {
             Investing Criteria
           </h1>
 
-          <div className="flex flex-col md:flex-row justify-center items-center py-12 md:py-16 gap-8">
+          <div className=" grid md:grid-cols-3 py-12 md:py-16 gap-8">
             <InvestCriteriaCard
               title="Revenue"
               value="$5 - $10M+"
               percentage={75}
               text="Positive"
-              description="Purus in massa tempor nec. Magna etiam tempor orci eDonec tincidunt velit et ligula sagittis."
+              description="Our expertise lies in acquiring specialized manufacturing and distribution companies with annual revenues ranging from $5M to over $10M."
+            />
+
+            <InvestCriteriaCard
+              percentage={20}
+              text="20%"
+              title="Cashflow"
+              value="Positive"
+              description="We focus on acquiring niche manufacturing and value-added distribution businesses that consistently maintain a positive cash flow."
             />
             <InvestCriteriaCard
               percentage={20}
               text="$5-10M"
               title="EBITDA Margin"
               value="20%+"
-              description="Purus in massa tempor nec. Magna etiam tempor orci eDonec tincidunt velit et ligula sagittis."
-            />
-            <InvestCriteriaCard
-              percentage={20}
-              text="20%"
-              title="Cashflow"
-              value="Positive"
-              description="Purus in massa tempor nec. Magna etiam tempor orci eDonec tincidunt velit et ligula sagittis."
+              description="We target businesses that regularly achieve profit margins of at least 20% before accounting for interest, taxes, depreciation, and amortization."
             />
           </div>
         </div>
 
         {/* Focus Sector Section */}
-        <div className="py-16 px-4 md:px-16  md:py-[6.25rem] bg-white-200 flex flex-col justify-center items-center">
+        <div className="py-16 px-4 md:px-16  md:py-[6.25rem] bg-white-300 flex flex-col justify-center items-center">
           <h1 className="text-3xl md:text-4xl font-semibold text-primary-200 font-main">
             Focus Sector
           </h1>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-8 lg:gap-x-12 py-12 md:py-16">
-            <div className="bg-white-100 rounded-md overflow-hidden shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-8 lg:gap-x-12 pt-12">
+            <div className="bg-white-100 rounded-md overflow-hidden ">
               <img
                 src={health}
                 alt="Health"
@@ -117,7 +117,7 @@ const Focuspage = () => {
               />
 
               <div className="bg-white-100 px-6 py-10 text-left">
-                <h2 className="text-lg font-medium font-main pb-4">
+                <h2 className="font-main text-lg md:text-xl font-medium pb-4">
                   Healthcare
                 </h2>
                 <p className="font-body text-sm leading-8 pr-4">
@@ -128,7 +128,7 @@ const Focuspage = () => {
               </div>
             </div>
 
-            <div className="bg-white-100 rounded-md overflow-hidden shadow-sm">
+            <div className="bg-white-100 rounded-md overflow-hidden ">
               <img
                 src={industry}
                 alt="Industry"
@@ -136,7 +136,7 @@ const Focuspage = () => {
               />
 
               <div className="bg-white-100 px-6 py-10 text-left">
-                <h2 className="text-lg font-medium font-main pb-4">
+                <h2 className="font-main text-lg md:text-xl font-medium pb-4">
                   Industrials
                 </h2>
                 <p className="font-body text-sm leading-8 pr-4">
@@ -146,7 +146,7 @@ const Focuspage = () => {
               </div>
             </div>
 
-            <div className="bg-white-100 rounded-md overflow-hidden shadow-sm">
+            <div className="bg-white-100 rounded-md overflow-hidden ">
               <img
                 src={aerospace}
                 alt="Aerospace"
@@ -154,7 +154,7 @@ const Focuspage = () => {
               />
 
               <div className="bg-white-100 px-6 py-10 text-left">
-                <h2 className="text-lg font-medium font-main pb-4">
+                <h2 className="font-main text-lg md:text-xl font-medium pb-4">
                   Aerospace
                 </h2>
                 <p className="font-body text-sm leading-8 pr-4">
@@ -168,7 +168,7 @@ const Focuspage = () => {
 
         {/* Transaction Type Section */}
         <div className="py-16 px-4 md:px-16  md:py-[6.25rem] bg-white-100">
-          <h1 className="text-3xl md:text-4xl font-semibold text-primary-200 font-main pb-8">
+          <h1 className="text-3xl md:text-4xl font-semibold text-primary-200 font-main pb-6">
             Transaction Type
           </h1>
           <p className="font-body font-normal leading-8">
@@ -179,7 +179,7 @@ const Focuspage = () => {
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 md:gap-12 pt-12">
             <div>
-              <h4 className="text-lg font-main font-semibold pb-4">
+              <h4 className="font-main text-lg md:text-xl font-medium pb-4">
                 Secondaries
               </h4>
               <p className="font-body font-normal leading-8">
@@ -191,7 +191,7 @@ const Focuspage = () => {
             </div>
 
             <div>
-              <h4 className="text-lg font-main font-semibold pb-4">
+              <h4 className="font-main text-lg md:text-xl font-medium pb-4">
                 Divestiture or spin-off
               </h4>
               <p className="font-body font-normal leading-8">
@@ -203,7 +203,7 @@ const Focuspage = () => {
             </div>
 
             <div>
-              <h4 className="text-lg font-main font-semibold pb-4">
+              <h4 className="font-main text-lg md:text-xl font-medium pb-4">
                 Management buy-outs
               </h4>
               <p className="font-body font-normal leading-8">

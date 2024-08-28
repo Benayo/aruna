@@ -18,12 +18,20 @@ const MapCard = () => {
   // Coordinates for 900 S. Stonebridge, McKinney, Texas
   const position = [33.1959, -96.6989];
 
+  // Inline styles for the MapContainer
+  const mapContainerStyle = {
+    height: "50vh",
+    width: "100%",
+    position: "relative", // Adjust as needed
+    zIndex: 1, // Ensure this is lower than the navbar z-index
+  };
+
   return (
     <MapContainer
       center={position}
       zoom={15}
       scrollWheelZoom={false}
-      className="h-[50vh] w-full map-container"
+      style={mapContainerStyle}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
