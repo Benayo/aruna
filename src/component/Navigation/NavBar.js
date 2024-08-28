@@ -5,8 +5,8 @@ import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav>
-      <div className="flex justify-between items-center px-4 py-4 md:px-16 md:py-6 w-full bg-white-100  text-primary-200 font-body shadow-sm">
+    <nav className="bg-white-100  text-primary-200 ">
+      <div className="flex justify-between items-center   md:px-16 md:py-6 w-full font-body shadow-sm">
         <Link to="/">
           <img src={Logo} alt="aruna-logo" />
         </Link>

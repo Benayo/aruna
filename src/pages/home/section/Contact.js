@@ -9,28 +9,28 @@ import edit from "../../../assests/Svg/edit.svg";
 
 const Contact = () => {
   return (
-    <section className="py-[6.25rem] px-4 md:px-16 bg-primary-100 text-white-100">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section className="py-16 px-4 md:px-16 md:py-[6.25rem] bg-primary-100 text-white-100">
+      <h2 className="text-xl md:text-2xl font-main text-white-100 font-semibold">
+        Get in Touch!
+      </h2>
+      <div className="grid lg:grid-cols-2 gap-4 xl:gap-20  items-center">
         {/* Contact Information */}
         <div>
-          <h2 className="text-base md:text-2xl font-main text-white-100 font-semibold mb-4">
-            Get in Touch!
-          </h2>
-          <h1 className="text-2xl md:text-[2.8rem] font-main text-white-100 font-semibold leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-white-100 font-semibold md:leading-snug my-6 md:my-4">
             Contact Us
           </h1>
-          <p className="font-body font-normal my-4 md:my-6 leading-7 text-sm md:text-base">
-            Purus in massa tempor nec. Magna etiam tempor orci eu lobortis
-            elementum nibh tellus molestie. Faucibus ornare
+          <p className="font-body font-normal text-sm xl:text-base my-2 md:my-4 leading-6 xl:leading-8">
+            Stay connected with us for timely updates and support. We value your
+            feedback and look forward to hearing from you!
           </p>
           <div className="py-4 font-body">
-            <div className="flex items-center mb-4 font-light">
+            <div className="flex items-center mb-6 font-light">
               <img src={location} alt="location" className="w-6 md:w-8" />
               <span className="ml-4 text-sm md:text-base">
                 900 S. Stonebridge, Suite number 102, McKinney Texas, 75070
               </span>
             </div>
-            <div className="flex items-center font-light">
+            <div className="flex items-center mb-6 font-light">
               <img src={envelop} alt="envelop" className="w-6 md:w-8" />
               <span className="ml-4 text-sm md:text-base">
                 info@arunaip.com
@@ -94,7 +94,7 @@ const Contact = () => {
           </div>
 
           <div className="mt-8">
-            <button className="w-full md:w-auto px-8 py-4 bg-white-100 text-primary-100 rounded-md font-main hover:bg-[#f1f1f1] focus:outline-none focus:ring-2 focus:ring-primary-100 focus:ring-opacity-50 transition-colors duration-300">
+            <button className="w-full md:w-auto py-4 px-8 rounded-md font-main text-base flex justify-center items-center text-center font-medium bg-white-100 text-primary-100  hover:bg-[#f1f1f1] focus:outline-none focus:ring-2 focus:ring-primary-100 focus:ring-opacity-50 transition-colors duration-300">
               Contact Us
             </button>
           </div>

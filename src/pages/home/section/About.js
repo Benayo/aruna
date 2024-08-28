@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import about from "../../../assests/Image/about-section.png";
-import aboutmobile from "../../../assests/Image/about-section-mobile.png";
+import design from "../../../assests/Svg/design-2.svg";
 import vision from "../../../assests/Svg/vision.svg";
 import commitment from "../../../assests/Svg/commitment.svg";
 
@@ -9,19 +10,18 @@ const About = () => {
   return (
     <div className="py-16 px-4 md:px-16 md:py-[6.25rem] bg-white-200">
       {/* Header Section */}
-      <h2 className="text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4">
+      <h2 className="text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-6 lg:mb-0 ">
         About Us
       </h2>
-
       {/* Main Content Section */}
-      <div className="grid xl:grid-cols-2 gap-8 items-center">
+      <div className="grid lg:grid-cols-2 gap-4 xl:gap-20  items-center">
         {/* Text Section */}
-        <div className="flex flex-col md:order-1 order-2 mt-2">
-          <h1 className="text-2xl md:text-[2.8rem] font-main text-primary-200 font-semibold leading-tight mb-4">
+        <div className="  flex flex-col lg:order-1 order-2 md:mt-2">
+          <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-primary-200 font-semibold md:leading-snug my-6 md:my-4">
             We are here to help small scale businesses get their success.
           </h1>
 
-          <p className="font-body font-normal my-2 md:my-6 leading-7">
+          <p className="font-body font-normal text-sm xl:text-base my-2 md:my-4 leading-6 xl:leading-8">
             Aruna Investment Partners (“Aruna”) is an investment management firm
             established to operate as an independent Sponsor to owners and
             managers of small-medium sized businesses operating in select
@@ -36,13 +36,13 @@ const About = () => {
               <img
                 src={vision}
                 alt="vision"
-                className="w-12 md:w-16 mb-4 md:mb-0"
+                className="w-10 md:w-16 mb-4 md:mb-0"
               />
               <div className="md:ml-6">
                 <h4 className="font-main text-lg md:text-xl font-medium mb-2">
                   Vision
                 </h4>
-                <p className="font-body font-normal leading-7">
+                <p className="font-body font-normal text-sm xl:text-base leading-6 xl:leading-8">
                   We aim to become the partner of choice for small scale
                   businesses in the United States, supporting them with long
                   term capital and strong operational value add.
@@ -53,13 +53,13 @@ const About = () => {
               <img
                 src={commitment}
                 alt="commitment"
-                className="w-12 md:w-16 mb-4 md:mb-0"
+                className="w-10 md:w-16 mb-4 md:mb-0"
               />
               <div className="md:ml-6">
                 <h4 className="font-main text-lg md:text-xl font-medium mb-2">
                   Commitment
                 </h4>
-                <p className="font-body font-normal leading-7">
+                <p className="font-body font-normal text-sm xl:text-base leading-6 xl:leading-8">
                   At Aruna Investment Partners, we deliver more than capital. We
                   provide hands-on support to help small businesses grow and
                   succeed through tailored investments and expert operational
@@ -70,27 +70,35 @@ const About = () => {
           </div>
 
           <div className="flex flex-col md:flex-row gap-4 py-4">
-            <button className="bg-primary-100 text-white-100 py-3 px-8 rounded-md font-main text-base md:text-lg">
+            <Link
+              to="/about"
+              className="bg-primary-100 text-white-100 py-4 px-8 rounded-md font-main text-base flex justify-center items-center text-center font-medium"
+            >
               More About Us
-            </button>
-            <button className="border border-primary-100 text-primary-100 py-3 px-4 rounded-md font-main text-base md:text-lg">
+            </Link>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.cardinalstone.com/"
+              className="border border-primary-100 text-primary-100 py-4 px-4 rounded-md font-main ext-base flex justify-center items-center text-center font-medium"
+            >
               Visit Our Affiliate Partner
-            </button>
+            </a>
           </div>
         </div>
 
         {/* Image Section */}
-        <div className="flex items-center justify-center w-full xl:order-2 py-4 md:py-0">
+        <div className=" relative flex items-center justify-center  w-full lg:order-2 ">
           <img
             src={about}
             alt="about"
-            className="hidden md:flex w-full  max-w-[34.25rem] xl:max-w-[31.25rem] h-auto object-cover"
+            className=" z-10 flex w-full   h-auto object-cover"
           />
 
           <img
-            src={aboutmobile}
+            src={design}
             alt="about"
-            className="w-full md:hidden h-auto object-cover"
+            className=" absolute  bottom-4 left-[-2%] md:bottom-0   xl:left-[-5%] h-[30%] xl:h-[45%]"
           />
         </div>
       </div>

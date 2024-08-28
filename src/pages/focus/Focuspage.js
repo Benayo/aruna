@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import Header from "../../component/PageHeader/Header";
 import InvestCriteriaCard from "../../component/Cards/InvestCriteriaCard";
@@ -7,6 +8,28 @@ import industry from "../../assests/Image/industry.jpg";
 import aerospace from "../../assests/Image/aerospace.jpg";
 
 const Focuspage = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const { hash } = location;
+    if (hash) {
+      const targetSection = document.getElementById(hash.slice(1));
+      if (targetSection) {
+        let navbarHeight = document.querySelector("nav").offsetHeight;
+
+        // Adjust navbarHeight for mobile view (if necessary)
+        if (window.innerWidth <= 768) {
+          navbarHeight = 120; // Example height for mobile navbar, adjust as needed
+        }
+
+        const targetPosition =
+          targetSection.getBoundingClientRect().top +
+          window.pageYOffset -
+          navbarHeight;
+        window.scrollTo({ top: targetPosition, behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <section>
       <Header title="Focus" />
@@ -46,7 +69,10 @@ const Focuspage = () => {
         </div>
 
         {/* Investing Criteria Section */}
-        <div className="py-16 px-4 md:px-16  md:py-[6.25rem] bg-white-100 flex flex-col justify-center items-center ">
+        <div
+          id="criteria"
+          className="py-16 px-4 md:px-16  md:py-[6.25rem] bg-white-100 flex flex-col justify-center items-center "
+        >
           <h1 className="text-3xl md:text-4xl font-semibold text-primary-200 font-main">
             Investing Criteria
           </h1>

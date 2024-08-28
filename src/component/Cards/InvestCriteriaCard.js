@@ -80,7 +80,9 @@ const InvestCriteriaCard = ({ percentage, text, title, description }) => {
         <h4 className="py-2 md:py-4 font-main text-lg md:text-xl font-medium">
           {title}
         </h4>
-        <p className="px-4 xl:px-8 text-sm  font-body">{description}</p>
+        <p className="px-4 xl:px-8 text-sm leading-6 font-body">
+          {description}
+        </p>
       </div>
     </div>
   );

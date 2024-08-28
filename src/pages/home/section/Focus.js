@@ -1,10 +1,11 @@
 import React from "react";
 
 import design from "../../../assests/Svg/design-1.svg";
+import { Link } from "react-router-dom";
 
 const Focus = () => {
   return (
-    <div className="relative py-16 px-4 md:px-16 bg-white-300">
+    <div className="relative py-16 px-4 md:px-16 md:py-[6.25rem] bg-white-300">
       {/* Image Container */}
       <div className="absolute inset-0 flex items-center justify-center">
         <img
@@ -21,15 +22,15 @@ const Focus = () => {
         style={{ zIndex: 1 }}
       >
         <div className="text-center px-4 md:px-8 xl:px-24">
-          <h2 className="text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-2">
+          <h2 className="text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4">
             Focus Sectors
           </h2>
 
-          <h1 className="text-2xl md:text-[2.8rem] font-main text-primary-200 font-semibold leading-tight mb-4">
+          <h1 className="text-3xl md:text-4xl font-semibold text-primary-200 font-main">
             Aruna Investment Focus Sector & Expertise
           </h1>
 
-          <p className="font-body font-normal my-4 md:my-8 leading-7">
+          <p className="font-body font-normal text-sm xl:text-base my-6 md:my-4 leading-6 xl:leading-8">
             We partner with and invest in owners of specialized, smaller-scale
             manufacturing companies and distributors of advanced components. Our
             focus is on businesses in the lower middle market looking for a
@@ -38,12 +39,18 @@ const Focus = () => {
         </div>
 
         <div className="flex flex-col gap-4 py-4 w-full md:flex-row md:w-auto">
-          <button className="bg-primary-100 text-white-100 py-3 px-6 rounded-md font-main text-base md:text-lg w-full md:w-auto">
+          <Link
+            to="/focus"
+            className="bg-primary-100 text-white-100 py-4 px-8 rounded-md font-main text-base flex justify-center items-center text-center font-medium"
+          >
             View Focus Sectors
-          </button>
-          <button className="border border-primary-100 text-primary-100 py-3 px-6 rounded-md font-main text-base md:text-lg w-full md:w-auto">
+          </Link>
+          <Link
+            to="/focus#criteria"
+            className="border border-primary-100 text-primary-100 py-4 px-4 rounded-md font-main ext-base flex justify-center items-center text-center font-medium"
+          >
             Acquisition Criteria
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -19,22 +19,34 @@ const Footer = () => {
           {/* Navigation Links */}
           <ul className="flex flex-col md:flex-row md:space-x-8 mb-8 md:mb-0 md:text-center">
             <li className="mb-6 md:mb-0">
-              <Link className="text-base md:text-lg hover:underline">
+              <Link
+                to="/about"
+                className="text-base md:text-lg hover:underline"
+              >
                 About us
               </Link>
             </li>
             <li className="mb-6 md:mb-0">
-              <Link className="text-base md:text-lg hover:underline">
+              <Link
+                to="/portfolio"
+                className="text-base md:text-lg hover:underline"
+              >
                 Portfolio
               </Link>
             </li>
             <li className="mb-6 md:mb-0">
-              <Link className="text-base md:text-lg hover:underline">
+              <Link
+                to="/focus"
+                className="text-base md:text-lg hover:underline"
+              >
                 Focus
               </Link>
             </li>
             <li className="mb-6 md:mb-0">
-              <Link className="text-base md:text-lg hover:underline">
+              <Link
+                to="/contact"
+                className="text-base md:text-lg hover:underline"
+              >
                 Contact us
               </Link>
             </li>
