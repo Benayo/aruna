@@ -79,25 +79,26 @@ const Focuspage = () => {
           <div className=" grid md:grid-cols-3 py-12 md:py-16 gap-8">
             <InvestCriteriaCard
               title="Revenue"
-              value="$5 - $10M+"
+              value="$2 - $10M+"
               percentage={75}
-              text="Positive"
-              description="Our expertise lies in acquiring specialized manufacturing and distribution companies with annual revenues ranging from $5M to over $10M."
+              text="$2 - $10M+"
+              description="Our expertise lies in acquiring specialized manufacturing and distribution companies with annual revenues ranging from $2M to over $10M."
             />
 
             <InvestCriteriaCard
               percentage={20}
-              text="20%"
-              title="Cashflow"
-              value="Positive"
-              description="We focus on acquiring niche manufacturing and value-added distribution businesses that consistently maintain a positive cash flow."
-            />
-            <InvestCriteriaCard
-              percentage={20}
-              text="$5-10M"
+              text="20%+"
               title="EBITDA Margin"
               value="20%+"
               description="We target businesses that regularly achieve profit margins of at least 20% before accounting for interest, taxes, depreciation, and amortization."
+            />
+
+            <InvestCriteriaCard
+              percentage={20}
+              text="Positive"
+              title="Cashflow"
+              value="Positive"
+              description="We focus on acquiring niche manufacturing and value-added distribution businesses that consistently maintain a positive cash flow."
             />
           </div>
         </div>
@@ -176,44 +177,29 @@ const Focuspage = () => {
             businesses with aligned managements leveraging equity, debt and
             convertible notes as required for individual deals.
           </p>
-
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 md:gap-12 pt-12">
-            <div>
-              <h4 className="font-main text-lg md:text-xl font-medium pb-4">
-                Secondaries
-              </h4>
-              <p className="font-body font-normal leading-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                sit amet accumsan arcu. Sed vel lectus nec purus dapibus
-                ultricies. Vestibulum vel urna eu augue posuere vehicula et non
-                magna. Nulla facilisi.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-main text-lg md:text-xl font-medium pb-4">
-                Divestiture or spin-off
-              </h4>
-              <p className="font-body font-normal leading-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                sit amet accumsan arcu. Sed vel lectus nec purus dapibus
-                ultricies. Vestibulum vel urna eu augue posuere vehicula et non
-                magna. Nulla facilisi.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-main text-lg md:text-xl font-medium pb-4">
-                Management buy-outs
-              </h4>
-              <p className="font-body font-normal leading-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                sit amet accumsan arcu. Sed vel lectus nec purus dapibus
-                ultricies. Vestibulum vel urna eu augue posuere vehicula et non
-                magna. Nulla facilisi.
-              </p>
-            </div>
-          </div>
+          <ul className="list-none pl-0 my-8 font-body">
+            <li className="relative pl-6 mb-6">
+              <span
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full"
+                style={{ backgroundColor: "#347856" }}
+              ></span>
+              <strong>Secondaries</strong>
+            </li>
+            <li className="relative pl-6 mb-6">
+              <span
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full"
+                style={{ backgroundColor: "#347856" }}
+              ></span>
+              <strong>Divestiture or Spin-off</strong>
+            </li>
+            <li className="relative pl-6 mb-6">
+              <span
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full"
+                style={{ backgroundColor: "#347856" }}
+              ></span>
+              <strong>Management Buy-outs</strong>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

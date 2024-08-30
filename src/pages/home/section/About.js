@@ -18,7 +18,7 @@ const About = () => {
         {/* Text Section */}
         <div className="  flex flex-col lg:order-1 order-2 md:mt-2">
           <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-primary-200 font-semibold md:leading-snug my-6 md:my-4">
-            We are here to help small scale businesses get their success.
+            We are here to help small businesses succeed
           </h1>
 
           <p className="font-body font-normal text-sm xl:text-base my-2 md:my-4 leading-6 xl:leading-8">
@@ -43,9 +43,11 @@ const About = () => {
                   Vision
                 </h4>
                 <p className="font-body font-normal text-sm xl:text-base leading-6 xl:leading-8">
-                  We aim to become the partner of choice for small scale
-                  businesses in the United States, supporting them with long
-                  term capital and strong operational value add.
+                  We aim to become the premier catalyst for transformative
+                  growth, empowering small and medium-sized businesses in North
+                  America to achieve market leadership through strategic capital
+                  investment, operational excellence, and unparalleled ecosystem
+                  partnerships.
                 </p>
               </div>
             </div>

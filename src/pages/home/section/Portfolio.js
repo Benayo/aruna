@@ -29,7 +29,7 @@ const Portfolio = () => {
             Portfolio
           </h2>
           <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-primary-200 font-semibold md:leading-snug md:my-4">
-            Our Capital Portfolio Companies
+            Our Portfolio Companies
           </h1>
           <p className="font-body font-normal text-sm xl:text-base my-2 md:my-4 leading-6 xl:leading-8">
             We believe that achieving successful outcomes starts and ends with

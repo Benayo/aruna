@@ -14,7 +14,7 @@ const Portfoliopage = () => {
 
           <div className="text-left">
             <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-primary-200 font-semibold md:leading-snug">
-              Our Capital Portfolio Companies
+              Our Portfolio Companies
             </h1>
 
             <p className="font-body font-normal leading-8 py-4">

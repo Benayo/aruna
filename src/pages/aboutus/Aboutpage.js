@@ -2,14 +2,6 @@ import React from "react";
 import Header from "../../component/PageHeader/Header";
 import vision from "../../assests/Image/vision.png";
 
-import image1 from "../../assests/Image/happiness-good-whiskey-a-good-cigar-and-a-great-conversation.jpg";
-import image2 from "../../assests/Image/gonna-marry-a-woman-of-my-life.png";
-import image3 from "../../assests/Image/looking-at-the-day-ahead.jpg";
-import image4 from "../../assests/Image/ready-for-a-date.svg";
-import image5 from "../../assests/Image/thoughtful-handsome-young-man.png";
-import image6 from "../../assests/Image/whatever-happens-im-ready-to-face-it.png";
-import image7 from "../../assests/Image/well-im-not-in-the-mood-for-any-jokes-today.png";
-
 const Aboutpage = () => {
   return (
     <section>
@@ -24,8 +16,7 @@ const Aboutpage = () => {
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 gap-x-10 md:gap-x-20 text-left">
             <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-primary-200 font-semibold md:leading-snug">
-              We are here to support small scale businesses and ensure they
-              succeed.
+              We are here to help small businesses succeed
             </h1>
 
             <div>
@@ -81,8 +72,7 @@ const Aboutpage = () => {
           </div>
         </section>
 
-        {/* Expert Team Section */}
-        <section className="py-8 md:py-16 bg-white-100 px-4 md:px-16">
+        {/* <section className="py-8 md:py-16 bg-white-100 px-4 md:px-16">
           <div className="text-center">
             <h2 className="text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4">
               Expert Team
@@ -94,7 +84,6 @@ const Aboutpage = () => {
 
           <div className="flex flex-col items-center py-12 md:py-24">
             <div className="grid grid-cols-4 md:grid-cols-8 gap-8">
-              {/* Team Member 1 */}
               <div className="text-center col-span-2">
                 <img
                   src={image1}
@@ -111,7 +100,6 @@ const Aboutpage = () => {
                 </div>
               </div>
 
-              {/* Team Member 2 */}
               <div className="text-center col-span-2">
                 <img
                   src={image2}
@@ -128,7 +116,6 @@ const Aboutpage = () => {
                 </div>
               </div>
 
-              {/* Team Member 3 */}
               <div className="text-center col-span-2">
                 <img
                   src={image3}
@@ -145,7 +132,6 @@ const Aboutpage = () => {
                 </div>
               </div>
 
-              {/* Team Member 4 */}
               <div className="text-center col-span-2">
                 <img
                   src={image4}
@@ -162,7 +148,6 @@ const Aboutpage = () => {
                 </div>
               </div>
 
-              {/* Team Member 5 */}
               <div className="text-center col-span-2 md:col-start-2">
                 <img
                   src={image5}
@@ -179,7 +164,6 @@ const Aboutpage = () => {
                 </div>
               </div>
 
-              {/* Team Member 6 */}
               <div className="text-center col-span-2 md:col-span-2">
                 <img
                   src={image6}
@@ -196,7 +180,6 @@ const Aboutpage = () => {
                 </div>
               </div>
 
-              {/* Team Member 7 */}
               <div className="text-center col-span-2  col-start-2   md:col-span-2">
                 <img
                   src={image7}
@@ -214,7 +197,7 @@ const Aboutpage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </section>
   );
