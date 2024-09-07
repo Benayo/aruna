@@ -1,20 +1,30 @@
 import React from "react";
 import Header from "../../component/PageHeader/Header";
+import { useInView } from "react-intersection-observer";
 import vision from "../../assests/Image/vision.png";
 
 const Aboutpage = () => {
+  const { ref: textRef, inView: textInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <section>
       <Header title="About us" />
 
-      <div className="pb-20">
+      <div ref={textRef} className="pb-20">
         {/* About Us Section */}
         <section className="py-8 md:py-16 bg-white-100 px-4 md:px-16">
-          <h2 className="text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4 lg:mb-0 ">
+          <h2
+            className={`text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4 lg:mb-0 ${
+              textInView ? " animate-moveInLeft" : ""
+            }`}
+          >
             About Us
           </h2>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 gap-x-10 md:gap-x-20 text-left">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 gap-x-10 md:gap-x-20 text-left ">
             <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-primary-200 font-semibold md:leading-snug">
               We are here to help small businesses succeed
             </h1>
@@ -51,7 +61,11 @@ const Aboutpage = () => {
 
         {/* Vision Section */}
         <section className="bg-white-200 py-16 md:py-[6.25rem] px-4 md:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-10 md:gap-x-20 text-left">
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-10 md:gap-x-20 text-left ${
+              textInView ? " animate-moveInBottom" : ""
+            }`}
+          >
             {/* Vision Image */}
             <div className="order-2 md:order-1">
               <img src={vision} alt="vision" className="w-full rounded-md" />

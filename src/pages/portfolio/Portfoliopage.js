@@ -1,14 +1,24 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import Header from "../../component/PageHeader/Header";
 
 const Portfoliopage = () => {
+  const { ref: textRef, inView: textInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <section>
       <Header title="Portfolio" />
-      <div className="pb-20">
+      <div ref={textRef} className="pb-20">
         {/* About Us Section */}
         <section className="py-4 md:py-16 bg-white-100 px-4 md:px-16">
-          <h2 className="text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4 lg:mb-0 ">
+          <h2
+            className={`text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4 lg:mb-0 ${
+              textInView ? " animate-moveInLeft" : ""
+            }`}
+          >
             Portfolio
           </h2>
 

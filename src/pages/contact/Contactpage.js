@@ -1,4 +1,6 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
+
 import ContactHeader from "../../component/PageHeader/ContactHeader";
 
 import location from "../../assests/Svg/location.svg";
@@ -11,15 +13,27 @@ import edit from "../../assests/Svg/dark-edit.svg";
 import MapCard from "../../component/Cards/MapCard";
 
 const Contactpage = () => {
+  const { ref: textRef, inView: textInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <section>
       <ContactHeader title="Contact us" />
 
-      <section className="py-16 md:py-[6.25rem] px-4 md:px-16 font-body">
+      <section
+        ref={textRef}
+        className="py-16 md:py-[6.25rem] px-4 md:px-16 font-body"
+      >
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 gap-x-10 md:gap-x-20 text-left">
           {/* Contact Information */}
           <div className="bg-primary-100 p-6 lg:p-8 rounded-md text-white-100">
-            <h2 className="text-xl md:text-2xl font-main text-white-100 font-semibold">
+            <h2
+              className={`text-xl md:text-2xl font-main text-white-100 font-semibold ${
+                textInView ? " animate-moveInLeft" : ""
+              }`}
+            >
               Get in Touch!
             </h2>
             <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-white-100 font-semibold md:leading-snug my-6 md:my-4">
@@ -60,9 +74,9 @@ const Contactpage = () => {
             <h1 className="pt-8 pb-10 lg:pb-16 font-main text-xl">
               Leave us a Message
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-8 lg:gap-y-16 mb-6">
+            <div className="grid grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-8 lg:gap-y-16 mb-6">
               {/* Name Input */}
-              <div className="flex items-center border-b border-[#B9B9B9] py-2 col-span-1">
+              <div className="flex items-center border-b border-[#B9B9B9] py-2 col-span-2  md:col-span-1">
                 <img src={person} alt="person" className="w-5 lg:w-6" />
                 <input
                   type="text"
@@ -72,7 +86,7 @@ const Contactpage = () => {
               </div>
 
               {/* Email Input */}
-              <div className="flex items-center border-b border-[#B9B9B9] py-2 col-span-1">
+              <div className="flex items-center border-b border-[#B9B9B9] py-2 col-span-2 md:col-span-1">
                 <img src={darkenvelop} alt="envelop" className="w-5 lg:w-6" />
                 <input
                   type="email"
@@ -82,7 +96,7 @@ const Contactpage = () => {
               </div>
 
               {/* Phone Input */}
-              <div className="flex items-center border-b border-[#B9B9B9] py-2 col-span-1">
+              <div className="flex items-center border-b border-[#B9B9B9] py-2 col-span-2 md:col-span-1">
                 <img src={phone} alt="phone" className="w-5 lg:w-6" />
                 <input
                   type="tel"
@@ -92,7 +106,7 @@ const Contactpage = () => {
               </div>
 
               {/* Subject Input */}
-              <div className="flex items-center border-b border-[#B9B9B9] py-2 col-span-1">
+              <div className="flex items-center border-b border-[#B9B9B9] py-2 col-span-2 md:col-span-1">
                 <img src={subject} alt="subject" className="w-5 lg:w-6" />
                 <input
                   type="text"
@@ -102,12 +116,12 @@ const Contactpage = () => {
               </div>
 
               {/* Message Input */}
-              <div className="flex items-center border-b border-[#B9B9B9] py-2 col-span-2">
+              <div className=" flex items-baseline border-b border-[#B9B9B9] py-2 col-span-2">
                 <img src={edit} alt="edit" className="w-5 lg:w-6" />
-                <input
+                <textarea
                   type="text"
                   placeholder="How can we help you? Feel free to get in touch!"
-                  className="w-full pl-3 text-primary-200 placeholder:text-primary-200 placeholder:font-body placeholder:font-light placeholder:text-sm outline-none"
+                  className=" w-full pl-3 text-primary-200 placeholder:text-primary-200 placeholder:font-body placeholder:font-light placeholder:text-sm outline-none"
                 />
               </div>
             </div>

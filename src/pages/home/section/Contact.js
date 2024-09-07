@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useInView } from "react-intersection-observer";
+
 import location from "../../../assests/Svg/location.svg";
 import envelop from "../../../assests/Svg/envelop.svg";
 import person from "../../../assests/Svg/person.svg";
@@ -8,12 +10,24 @@ import subject from "../../../assests/Svg/subject.svg";
 import edit from "../../../assests/Svg/edit.svg";
 
 const Contact = () => {
+  const { ref: textRef, inView: textInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <section className="py-16 px-4 md:px-16 md:py-[6.25rem] bg-primary-100 text-white-100">
-      <h2 className="text-xl md:text-2xl font-main text-white-100 font-semibold">
+      <h2
+        className={`text-xl md:text-2xl font-main text-white-100 font-semibold ${
+          textInView ? "animate-moveInLeft" : ""
+        }`}
+      >
         Get in Touch!
       </h2>
-      <div className="grid lg:grid-cols-2 gap-4 xl:gap-20  items-center">
+      <div
+        ref={textRef}
+        className="grid lg:grid-cols-2 gap-4 xl:gap-20  items-center "
+      >
         {/* Contact Information */}
         <div>
           <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-white-100 font-semibold md:leading-snug my-6 md:my-4">
@@ -83,9 +97,9 @@ const Contact = () => {
             </div>
 
             {/* Message Input */}
-            <div className="flex items-center border-b py-2 col-span-2">
+            <div className="flex items-baseline border-b py-2 col-span-2">
               <img src={edit} alt="edit" className="w-6 md:w-8" />
-              <input
+              <textarea
                 type="text"
                 placeholder="How can we help you? Feel free to get in touch!"
                 className="w-full pl-3 bg-primary-100 text-white-100 placeholder:text-white-100 placeholder:font-body placeholder:font-light placeholder:text-sm outline-none"

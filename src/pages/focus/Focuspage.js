@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 
 import Header from "../../component/PageHeader/Header";
 import InvestCriteriaCard from "../../component/Cards/InvestCriteriaCard";
@@ -9,6 +10,11 @@ import aerospace from "../../assests/Image/aerospace.jpg";
 
 const Focuspage = () => {
   const location = useLocation();
+
+  const { ref: textRef, inView: textInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   useEffect(() => {
     const { hash } = location;
@@ -34,14 +40,18 @@ const Focuspage = () => {
     <section>
       <Header title="Focus" />
 
-      <div className="pb-20">
+      <div ref={textRef} className="pb-20">
         {/* Approach Section */}
         <div className="py-4 md:py-16 bg-white-100 px-4 md:px-16 ">
-          <h2 className="text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4 lg:mb-0 ">
+          <h2
+            className={`text-xl md:text-2xl font-main text-secondary-100 font-semibold mb-4 lg:mb-0 ${
+              textInView ? " animate-moveInLeft" : ""
+            }`}
+          >
             Approach
           </h2>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 gap-x-10 md:gap-x-20 text-left">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 gap-x-10 md:gap-x-20 text-left ">
             <h1 className="text-3xl sm:text-4xl xl:text-[2.8rem]  font-main text-primary-200 font-semibold md:leading-snug">
               We partner with and invest in small businesses.
             </h1>
@@ -72,7 +82,11 @@ const Focuspage = () => {
           id="criteria"
           className="py-16 px-4 md:px-16  md:py-[6.25rem] bg-white-100 flex flex-col justify-center items-center "
         >
-          <h1 className="text-3xl md:text-4xl font-semibold text-primary-200 font-main">
+          <h1
+            className={`text-3xl md:text-4xl font-semibold text-primary-200 font-main ${
+              textInView ? " animate-moveInBottom" : ""
+            }`}
+          >
             Investing Criteria
           </h1>
 
@@ -83,29 +97,36 @@ const Focuspage = () => {
               percentage={75}
               text="$2 - $10M+"
               description="Our expertise lies in acquiring specialized manufacturing and distribution companies with annual revenues ranging from $2M to over $10M."
+              isInView={textInView}
             />
 
             <InvestCriteriaCard
-              percentage={20}
-              text="20%+"
               title="EBITDA Margin"
               value="20%+"
+              percentage={20}
+              text="20%+"
               description="We target businesses that regularly achieve profit margins of at least 20% before accounting for interest, taxes, depreciation, and amortization."
+              isInView={textInView}
             />
 
             <InvestCriteriaCard
-              percentage={20}
-              text="Positive"
               title="Cashflow"
               value="Positive"
+              percentage={20}
+              text="Positive"
               description="We focus on acquiring niche manufacturing and value-added distribution businesses that consistently maintain a positive cash flow."
+              isInView={textInView}
             />
           </div>
         </div>
 
         {/* Focus Sector Section */}
         <div className="py-16 px-4 md:px-16  md:py-[6.25rem] bg-white-300 flex flex-col justify-center items-center">
-          <h1 className="text-3xl md:text-4xl font-semibold text-primary-200 font-main">
+          <h1
+            className={`text-3xl md:text-4xl font-semibold text-primary-200 font-main ${
+              textInView ? " animate-moveInBottom" : ""
+            }`}
+          >
             Focus Sector
           </h1>
 
@@ -169,7 +190,11 @@ const Focuspage = () => {
 
         {/* Transaction Type Section */}
         <div className="py-16 px-4 md:px-16  md:py-[6.25rem] bg-white-100">
-          <h1 className="text-3xl md:text-4xl font-semibold text-primary-200 font-main pb-6">
+          <h1
+            className={`text-3xl md:text-4xl font-semibold text-primary-200 font-main pb-6 ${
+              textInView ? " animate-moveInLeft" : ""
+            }`}
+          >
             Transaction Type
           </h1>
           <p className="font-body font-normal leading-8">
