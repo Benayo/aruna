@@ -13,6 +13,7 @@ import Focuspage from "./pages/focus/Focuspage";
 import Aboutpage from "./pages/aboutus/Aboutpage";
 import Portfoliopage from "./pages/portfolio/Portfoliopage";
 import Contactpage from "./pages/contact/Contactpage";
+import NotFound from "./pages/error/NotFound";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -32,22 +33,16 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Homepage />} />
-          </Routes>
 
-          <Routes>
             <Route path="/focus" element={<Focuspage />} />
-          </Routes>
 
-          <Routes>
             <Route path="/about" element={<Aboutpage />} />
-          </Routes>
 
-          <Routes>
             <Route path="/portfolio" element={<Portfoliopage />} />
-          </Routes>
 
-          <Routes>
             <Route path="/contact" element={<Contactpage />} />
+
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
       </Router>
