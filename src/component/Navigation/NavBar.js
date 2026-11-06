@@ -40,6 +40,14 @@ const NavBar = () => {
             <p className="pr-2">Portfolio</p>
           </NavLink>
 
+
+          {/* <NavLink
+            to="/careers"
+            className="mr-6 text-primary-200 hover:text-primary-100 transition-colors duration-300 hover:font-medium"
+          >
+            <p className="pr-2">Careers</p>
+          </NavLink> */}
+
           <NavLink
             to="/contact"
             className="mr-6 text-primary-200 hover:text-primary-100 transition-colors duration-300 hover:font-medium"

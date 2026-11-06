@@ -1,23 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import React, { useEffect, useRef, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 
-import ContactHeader from "../../component/PageHeader/ContactHeader";
+import ContactHeader from '../../component/PageHeader/ContactHeader';
 
-import location from "../../assests/Svg/location.svg";
-import envelop from "../../assests/Svg/envelop.svg";
-import darkenvelop from "../../assests/Svg/dark-envelop.svg";
-import person from "../../assests/Svg/dark-person.svg";
-import phone from "../../assests/Svg/dark-phone.svg";
-import subject from "../../assests/Svg/dark-subject.svg";
-import edit from "../../assests/Svg/dark-edit.svg";
-import MapCard from "../../component/Cards/MapCard";
+import location from '../../assests/Svg/location.svg';
+import envelop from '../../assests/Svg/envelop.svg';
+import darkenvelop from '../../assests/Svg/dark-envelop.svg';
+import person from '../../assests/Svg/dark-person.svg';
+import phone from '../../assests/Svg/dark-phone.svg';
+import subject from '../../assests/Svg/dark-subject.svg';
+import edit from '../../assests/Svg/dark-edit.svg';
+import MapCard from '../../component/Cards/MapCard';
 
 const Contactpage = () => {
   const { ref: textRef, inView: textInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState('');
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const form = useRef();
@@ -25,10 +25,10 @@ const Contactpage = () => {
 
   const validateForm = (formData) => {
     const errors = {};
-    if (!formData.get("name")) errors.name = "Name is required.";
-    if (!formData.get("email") || !/\S+@\S+\.\S+/.test(formData.get("email")))
-      errors.email = "Valid email is required.";
-    if (!formData.get("message")) errors.message = "Message cannot be empty.";
+    if (!formData.get('name')) errors.name = 'Name is required.';
+    if (!formData.get('email') || !/\S+@\S+\.\S+/.test(formData.get('email')))
+      errors.email = 'Valid email is required.';
+    if (!formData.get('message')) errors.message = 'Message cannot be empty.';
     return errors;
   };
 
@@ -46,36 +46,36 @@ const Contactpage = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("https://api.arunaip.com/send-email", {
-        method: "POST",
+      const response = await fetch('https://api.arunaip.com/send-email', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.get("name"),
-          email: formData.get("email"),
-          phone: formData.get("phone"),
-          subject: formData.get("subject"),
-          message: formData.get("message"),
+          name: formData.get('name'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          subject: formData.get('subject'),
+          message: formData.get('message'),
         }),
       });
 
       if (!response.ok) {
-        throw new Error("Network response was not ok.");
+        throw new Error('Network response was not ok.');
       }
 
-      setStatus("Success! Your message has been sent.");
+      setStatus('Success! Your message has been sent.');
       form.current.reset();
       setErrors({});
     } catch (error) {
-      setStatus("Failed to send the message. Please try again.");
-      console.error("Failed to send email:", error);
+      setStatus('Failed to send the message. Please try again.');
+      console.error('Failed to send email:', error);
     } finally {
       setLoading(false);
     }
 
     statusTimeout.current = setTimeout(() => {
-      setStatus("");
+      setStatus('');
     }, 10000);
   };
 
@@ -99,13 +99,13 @@ const Contactpage = () => {
       }
 
       // Check and remove specific errors
-      if (name === "email" && value && /\S+@\S+\.\S+/.test(value)) {
+      if (name === 'email' && value && /\S+@\S+\.\S+/.test(value)) {
         delete updatedErrors.email;
       }
-      if (name === "name" && value) {
+      if (name === 'name' && value) {
         delete updatedErrors.name;
       }
-      if (name === "message" && value) {
+      if (name === 'message' && value) {
         delete updatedErrors.message;
       }
 
@@ -125,7 +125,7 @@ const Contactpage = () => {
           <div className="bg-primary-100 p-6 lg:p-8 rounded-md text-white-100">
             <h2
               className={`text-xl md:text-2xl font-main text-white-100 font-semibold ${
-                textInView ? "animate-moveInLeft" : ""
+                textInView ? 'animate-moveInLeft' : ''
               }`}
             >
               Get in Touch!
@@ -141,7 +141,7 @@ const Contactpage = () => {
               <div className="flex items-center mb-6 font-light">
                 <img src={location} alt="location" className="w-5 lg:w-6" />
                 <span className="ml-3 lg:ml-4 text-sm lg:text-base">
-                  900 S. Stonebridge, Suite number 102, McKinney Texas, 75070
+                  6060 N Central Expressway, Suite 500 Dallas,Texas,75206
                 </span>
               </div>
               <div className="flex items-center font-light">
@@ -158,7 +158,7 @@ const Contactpage = () => {
               </div>
 
               <p className="mt-4 text-center">
-                900 S. Stonebridge, Suite number 102, McKinney Texas, 75070
+                6060 N Central Expressway, Suite 500 Dallas,Texas,75206
               </p>
             </div>
           </div>
@@ -253,15 +253,15 @@ const Contactpage = () => {
                     Submitting...
                   </div>
                 ) : (
-                  "Send a Message"
+                  'Send a Message'
                 )}
               </button>
               {status && (
                 <p
                   className={`mt-4 text-center ${
-                    status.startsWith("Success")
-                      ? "text-green-600"
-                      : "text-red-600"
+                    status.startsWith('Success')
+                      ? 'text-green-600'
+                      : 'text-red-600'
                   }`}
                 >
                   {status}

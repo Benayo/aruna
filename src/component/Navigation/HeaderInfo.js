@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import envelop from "../../assests/Svg/filled-envelope.svg";
-import location from "../../assests/Svg/location-filled.svg";
-import facebook from "../../assests/Svg/facebook-f.svg";
-import linkedIn from "../../assests/Svg/linkedin-in.svg";
-import X from "../../assests/Svg/x-filled.svg";
+import envelop from '../../assests/Svg/filled-envelope.svg';
+import location from '../../assests/Svg/location-filled.svg';
+import facebook from '../../assests/Svg/facebook-f.svg';
+import linkedIn from '../../assests/Svg/linkedin-in.svg';
+import X from '../../assests/Svg/x-filled.svg';
 
 const HeaderInfo = () => {
   return (
@@ -29,7 +29,7 @@ const HeaderInfo = () => {
           >
             <img src={location} alt="location" className="w-5" />
             <div className="mx-2">
-              900 S. Stonebridge, Suite number 102, McKinney Texas, 75070
+              6060 N Central Expressway, Suite 500 Dallas,Texas,75206
             </div>
           </a>
         </div>

@@ -1,8 +1,8 @@
-import React from "react";
-import HeaderInfo from "../Navigation/HeaderInfo";
-import NavBar from "../Navigation/NavBar";
-import MobileMenu from "../Navigation/MobileMenu";
-import Footer from "../Footer/Footer";
+import React from 'react';
+import HeaderInfo from '../Navigation/HeaderInfo';
+import NavBar from '../Navigation/NavBar';
+import MobileMenu from '../Navigation/MobileMenu';
+import Footer from '../Footer/Footer';
 
 const Layout = ({ children }) => {
   return (

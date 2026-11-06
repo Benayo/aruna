@@ -59,6 +59,10 @@ const MobileMenu = () => {
                     Portfolio
                   </NavLink>
 
+                  {/* <NavLink to="/careers" onClick={closeMenu} className="py-4">
+                    Careers
+                  </NavLink> */}
+
                   <NavLink to="/contact" onClick={closeMenu} className="py-4">
                     Contact us
                   </NavLink>

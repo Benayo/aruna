@@ -1,11 +1,11 @@
-import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
+import React from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
 
 // Leaflet marker fix for missing marker icon issue
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
 let DefaultIcon = L.icon({
   iconUrl: markerIcon,
@@ -15,14 +15,14 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const MapCard = () => {
-  // Coordinates for 900 S. Stonebridge, McKinney, Texas
-  const position = [33.1959, -96.6989];
+  // Coordinates for 6060 N Central Expressway, Suite 500 Dallas, Texas
+  const position = [32.8998, -96.7699];
 
   // Inline styles for the MapContainer
   const mapContainerStyle = {
-    height: "50vh",
-    width: "100%",
-    position: "relative", // Adjust as needed
+    height: '50vh',
+    width: '100%',
+    position: 'relative', // Adjust as needed
     zIndex: 1, // Ensure this is lower than the navbar z-index
   };
 
@@ -38,9 +38,7 @@ const MapCard = () => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
       <Marker position={position}>
-        <Popup>
-          900 S. Stonebridge, Suite number 102, McKinney Texas, 75070
-        </Popup>
+        <Popup>6060 N Central Expressway, Suite 500 Dallas,Texas,75206</Popup>
       </Marker>
     </MapContainer>
   );
